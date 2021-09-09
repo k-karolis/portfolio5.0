@@ -6,10 +6,17 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "emailjs-com": "^3.2.0",
     "esbuild": "^0.12.25",
+    "framer-motion": "^4.1.17",
+    "prettier": "^2.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-intersection-observer": "^8.32.1",
     "react-scripts": "4.0.3",
+    "react-toastify": "^8.0.2",
+    "sass": "^1.39.0",
+    "use-sound": "^4.0.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

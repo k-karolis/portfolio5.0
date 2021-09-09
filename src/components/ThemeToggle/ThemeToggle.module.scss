@@ -1,0 +1,18 @@
+@import "../../App.module.scss";
+
+.Toggle {
+  position: absolute;
+  // top: 15px;
+  // right: 15px;
+
+  cursor: pointer;
+}
+
+.Sun,
+.Moon {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  height: 25px;
+  width: 25px;
+}

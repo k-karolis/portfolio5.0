@@ -1,0 +1,69 @@
+@import "../../../../App.module.scss";
+
+.DarkMode,
+.LightMode {
+  display: flex;
+  flex-direction: column;
+}
+
+.BackGround {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+
+  border-radius: 5px;
+  transform: skewY(-5deg);
+  background-color: $warmWhite;
+  box-shadow: $whiteShadow;
+  transition: $effects;
+  z-index: 50;
+  border-left: solid $brightOrange 2px;
+  border-top: solid $brightOrange 2px;
+}
+
+.Intro {
+  padding-top: 35px;
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  line-height: 20px;
+  color: $darkBlue;
+  font-weight: 400;
+  transform: skewY(5deg);
+  transition: $effects;
+}
+
+div .Link {
+  margin-top: -15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-self: flex-end;
+  transition: $effects;
+  transform: skewY(-5deg);
+  z-index: 10;
+}
+
+div .Social {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  transition: $effects;
+}
+
+.DarkMode .BackGround {
+  transition: $effects;
+  box-shadow: $blackShadow;
+  background-color: $darkBlue;
+  color: $warmWhite;
+}
+
+.DarkMode .Intro {
+  color: $warmWhite;
+  transition: $effects;
+}
