@@ -1,6 +1,6 @@
 import styles from './Main.module.scss';
 import LandingPage from './LandingPage/LandingPage';
-import ProjectsPage from './ProjectsPage/ProjectsPage';
+// import ProjectsPage from './ProjectsPage/ProjectsPage';
 import ThemeToggle from '../../components/ThemeToggle/ThemeToggle';
 import { useContextProvider } from '../../components/ContextProvider/Provider';
 

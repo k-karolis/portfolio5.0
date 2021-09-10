@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styles from './ProjectCard.module.scss';
 
 import { motion } from 'framer-motion';

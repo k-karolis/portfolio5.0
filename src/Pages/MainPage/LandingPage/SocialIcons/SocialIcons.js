@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import styles from './Social.module.scss';
 import { motion } from 'framer-motion';
 import { v4 as uuidv4 } from 'uuid';

@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
-import Intro from './Intro/Intro';
+// import Intro from './Intro/Intro';
 
-import selfie from '../../../assets/self.jpg';
+// import selfie from '../../../assets/self.jpg';
 import styles from './LandingPage.module.scss';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import { useContextProvider } from '../../../components/ContextProvider/Provider';
 
 import NameTitle from './NameTitle/NameTitle';

@@ -20,6 +20,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "esbuild": "esbuild src/index.js --bundle --minify --outfile=build/main.js --loader:.html=text --loader:.js=jsx --loader:.svg=dataurl --color=true",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

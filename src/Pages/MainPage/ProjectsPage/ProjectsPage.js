@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styles from './ProjectsPage.module.scss';
 
 import Cards from './Cards/ProjectCard';
