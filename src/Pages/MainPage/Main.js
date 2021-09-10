@@ -1,7 +1,7 @@
 import styles from './Main.module.scss';
 import LandingPage from './LandingPage/LandingPage';
 // import ProjectsPage from './ProjectsPage/ProjectsPage';
-import ThemeToggle from '../../components/ThemeToggle/ThemeToggle';
+import ThemeToggler from '../../components/ThemeToggler/ThemeToggler';
 import { useContextProvider } from '../../components/ContextProvider/Provider';
 
 export default function Main() {
@@ -10,7 +10,7 @@ export default function Main() {
   return (
     <div className={isDarkTheme ? styles.DarkMode : styles.LightMode}>
       <div className={styles.Main}>
-        <ThemeToggle />
+        <ThemeToggler />
         <LandingPage />
       </div>
 

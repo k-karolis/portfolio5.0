@@ -7,7 +7,8 @@ export const useContextProvider = () => {
 };
 
 export const Provider = ({ children }) => {
-  const [isDarkTheme, setIsDarkTheme] = useState(true);
+  const themeMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [isDarkTheme, setIsDarkTheme] = useState(themeMode);
 
   const value = { isDarkTheme, setIsDarkTheme };
 

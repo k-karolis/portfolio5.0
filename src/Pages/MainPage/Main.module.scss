@@ -2,13 +2,13 @@
 
 .LightMode {
   transition: $effects;
-  background-color: $darkBlue;
+  background-color: $warmWhite;
   color: $darkBlue;
 }
 
 .DarkMode {
   transition: $effects;
-  background-color: $warmWhite;
+  background-color: $darkBlue;
   color: $warmWhite;
 }
 

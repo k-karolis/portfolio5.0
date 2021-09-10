@@ -34,7 +34,7 @@ export default function NameTitle() {
   };
 
   const underlineVariant = {
-    hidden: { opacity: 1, scale: 0, rotate: -3 },
+    hidden: { opacity: 0, scale: 0, rotate: -3 },
   };
 
   return (
@@ -46,7 +46,7 @@ export default function NameTitle() {
           variants={firstVariant}
           initial="hidden"
           animate={{
-            color: isDarkTheme ? 'rgb(34, 40, 49)' : 'rgb(236, 236, 236)',
+            color: isDarkTheme ? 'rgb(236, 236, 236)' : 'rgb(34, 40, 49)',
             opacity: 1,
             x: 0,
             transition: {
@@ -64,7 +64,7 @@ export default function NameTitle() {
           variants={lastVariant}
           initial="hidden"
           animate={{
-            color: isDarkTheme ? 'rgb(34, 40, 49)' : 'rgb(236, 236, 236)',
+            color: isDarkTheme ? 'rgb(236, 236, 236)' : 'rgb(34, 40, 49)',
             opacity: 1,
             x: 0,
             transition: {
@@ -82,7 +82,7 @@ export default function NameTitle() {
           variants={titleVariant}
           initial="hidden"
           animate={{
-            color: isDarkTheme ? 'rgb(34, 40, 49)' : 'rgb(236, 236, 236)',
+            color: isDarkTheme ? 'rgb(236, 236, 236)' : 'rgb(34, 40, 49)',
             opacity: 1,
             rotate: -3,
             x: 0,
@@ -102,8 +102,8 @@ export default function NameTitle() {
           initial="hidden"
           animate={{
             backgroundColor: isDarkTheme
-              ? 'rgb(34, 40, 49)'
-              : 'rgb(236, 236, 236)',
+              ? 'rgb(236, 236, 236)'
+              : 'rgb(34, 40, 49)',
             opacity: 1,
             rotate: -3,
             scale: 1.1,
