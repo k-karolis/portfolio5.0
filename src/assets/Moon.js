@@ -1,19 +1,16 @@
-import { motion, AnimatePresence } from "framer-motion";
-import styles from "./svg.module.scss";
-import { v4 as uuidv4 } from "uuid";
+import { motion, AnimatePresence } from 'framer-motion';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function Moon() {
   return (
     <AnimatePresence>
       <svg
-        className={styles.Moon}
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
         y="0px"
         width="25"
         height="25"
-        viewBox="0 0 512 512"
-      >
+        viewBox="0 0 512 512">
         <motion.path
           whileHover={{
             rotate: [0, 36, 0],
@@ -141,9 +138,56 @@ export default function Moon() {
             height="10.362"
           />
 
-          <rect
+          <motion.rect
+            layout
+            key={uuidv4()}
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: {
+                duration: 3,
+                repeat: Infinity,
+                repeatDelay: 4,
+              },
+            }}
+            exit={{
+              opacity: 1,
+              transition: {
+                duration: 3,
+                repeat: Infinity,
+                repeatDelay: 3,
+              },
+            }}
             x="117.587"
             y="97.883"
+            transform="matrix(0.7071 -0.7071 0.7071 0.7071 -36.9191 116.9972)"
+            fill="#ECECEC"
+            width="10.362"
+            height="10.362"
+          />
+
+          <motion.rect
+            layout
+            key={uuidv4()}
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: {
+                duration: 5,
+                repeat: Infinity,
+                repeatDelay: 2,
+              },
+            }}
+            exit={{
+              opacity: 1,
+              transition: {
+                duration: 5,
+                repeat: Infinity,
+                repeatDelay: 2,
+              },
+            }}
+            x="150.587"
+            y="450.883"
             transform="matrix(0.7071 -0.7071 0.7071 0.7071 -36.9191 116.9972)"
             fill="#ECECEC"
             width="10.362"

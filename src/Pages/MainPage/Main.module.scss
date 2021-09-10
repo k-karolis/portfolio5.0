@@ -1,20 +1,37 @@
-@import "../../App.module.scss";
+@import '../../index.module.scss';
 
-.Toggle {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: flex-end;
+.LightMode {
+  transition: $effects;
+  background-color: $darkBlue;
+  color: $darkBlue;
 }
 
-.Landing div {
-  display: flex;
-  justify-content: center;
-  align-self: center;
+.DarkMode {
+  transition: $effects;
+  background-color: $warmWhite;
+  color: $warmWhite;
 }
 
-.Projects div {
-  display: flex;
-  justify-content: center;
-  align-self: flex-start;
+.Main {
+  width: 100vw;
+  height: 100vh;
 }
+
+// .Toggle {
+//   margin: 0;
+//   padding: 0;
+//   display: flex;
+//   justify-content: flex-end;
+// }
+
+// .Landing div {
+//   display: flex;
+//   justify-content: center;
+//   align-self: center;
+// }
+
+// .Projects div {
+//   display: flex;
+//   justify-content: center;
+//   align-self: flex-start;
+// }

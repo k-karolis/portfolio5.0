@@ -1,61 +1,61 @@
-@import "../../../App.module.scss";
+@import '../../../index.module.scss';
 
 .LandingPage {
   display: flex;
-  flex-direction: column;
+  // width: 100vw;
+  // height: 100vh;
+  align-items: center;
+  justify-content: center;
   transition: $effects;
+  // background-color: $brightBlue;
 }
 
-.LightMode {
-  transition: $effects;
-  height: 100vh;
-  width: 100vw;
-  background-color: $darkBlue;
-}
+// .LightMode {
+//   transition: $effects;
+//   background-color: $darkBlue;
+// }
 
-.DarkMode {
-  transition: $effects;
-  height: 100vh;
-  width: 100vw;
-  background-color: $warmWhite;
-}
+// .DarkMode {
+//   transition: $effects;
+//   background-color: $warmWhite;
+// }
 
-.LandingIntro {
-  margin-top: -250px;
-  z-index: 100;
-  display: flex;
-  flex-direction: row;
-  transition: $effects;
-}
+// .LandingIntro {
+//   margin-top: -250px;
+//   z-index: 100;
+//   display: flex;
+//   flex-direction: row;
+//   transition: $effects;
+// }
 
-.Titles {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding-right: 25px;
-}
+// .Titles {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-end;
+//   padding-right: 25px;
+// }
 
-.DarkMode .Title {
-  transition: $effects;
-  color: $darkBlue;
-}
+// .DarkMode .Title {
+//   transition: $effects;
+//   color: $darkBlue;
+// }
 
-.Selfie {
-  object-fit: cover;
-  height: 175px;
-  width: 175px;
-  box-shadow: $whiteShadow;
-  border-radius: 100%;
-  transition: $effects;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  filter: brightness(0.8);
-}
+// .Selfie {
+//   object-fit: cover;
+//   height: 175px;
+//   width: 175px;
+//   box-shadow: $whiteShadow;
+//   border-radius: 100%;
+//   transition: $effects;
+//   -webkit-user-select: none;
+//   -moz-user-select: none;
+//   -ms-user-select: none;
+//   user-select: none;
+//   filter: brightness(0.8);
+// }
 
-.DarkMode .Selfie {
-  filter: brightness(1.1);
-  transition: $effects;
-  box-shadow: $blackShadow;
-}
+// .DarkMode .Selfie {
+//   filter: brightness(1.1);
+//   transition: $effects;
+//   box-shadow: $blackShadow;
+// }

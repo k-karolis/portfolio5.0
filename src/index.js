@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.module.css';
-import App from './App';
-
-import ThemeProvider from './components/ThemeProvider/ThemeProvider';
+import './index.module.scss';
+import Main from './Pages/MainPage/Main';
+import ContextProvider from './components/ContextProvider/Provider';
 
 ReactDOM.render(
-  <ThemeProvider>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </ThemeProvider>,
+  <React.StrictMode>
+    <ContextProvider>
+      <Main />
+    </ContextProvider>
+  </React.StrictMode>,
   document.getElementById('root')
 );

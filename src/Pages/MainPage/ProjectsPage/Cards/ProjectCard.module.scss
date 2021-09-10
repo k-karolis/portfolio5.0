@@ -1,10 +1,10 @@
-@import "../../../../App.module.scss";
+@import '../../../../index.module.scss';
 
 .ProjectCards {
   display: flex;
   flex-direction: row;
   color: $darkBlue;
-  font-family: "Caveat", cursive;
+  font-family: 'Caveat', cursive;
   text-align: center;
   &:hover video {
     filter: blur(0);

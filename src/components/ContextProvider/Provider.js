@@ -7,9 +7,9 @@ export const useContextProvider = () => {
 };
 
 export const Provider = ({ children }) => {
-  const [isData, setIsData] = useState();
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
 
-  const value = { isData, setIsData };
+  const value = { isDarkTheme, setIsDarkTheme };
 
   return <Context.Provider value={value}>{children}</Context.Provider>;
 };

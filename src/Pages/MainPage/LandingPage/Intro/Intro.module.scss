@@ -1,4 +1,4 @@
-@import "../../../../App.module.scss";
+@import '../../../../index.module.scss';
 
 .DarkMode,
 .LightMode {
@@ -13,7 +13,7 @@
 
   border-radius: 5px;
   transform: skewY(-5deg);
-  background-color: $warmWhite;
+  // background-color: $warmWhite;
   box-shadow: $whiteShadow;
   transition: $effects;
   z-index: 50;
@@ -32,7 +32,7 @@
   font-size: 1.5rem;
   letter-spacing: 5px;
   line-height: 20px;
-  color: $darkBlue;
+  // color: $darkBlue;
   font-weight: 400;
   transform: skewY(5deg);
   transition: $effects;
@@ -58,12 +58,12 @@ div .Social {
 
 .DarkMode .BackGround {
   transition: $effects;
-  box-shadow: $blackShadow;
-  background-color: $darkBlue;
+  // box-shadow: $blackShadow;
+  // background-color: $darkBlue;
   color: $warmWhite;
 }
 
 .DarkMode .Intro {
-  color: $warmWhite;
+  // color: $warmWhite;
   transition: $effects;
 }

@@ -1,6 +1,5 @@
-import { motion, AnimatePresence } from "framer-motion";
-import styles from "./svg.module.scss";
-import { v4 as uuidv4 } from "uuid";
+import { motion, AnimatePresence } from 'framer-motion';
+import { v4 as uuidv4 } from 'uuid';
 
 const duration = 0.5;
 
@@ -8,14 +7,12 @@ export default function Sun() {
   return (
     <AnimatePresence>
       <svg
-        className={styles.Sun}
         viewBox="0 0 128 128"
         width="25"
         height="25"
         x="0px"
         y="0px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+        xmlns="http://www.w3.org/2000/svg">
         <motion.g
           whileHover={{
             rotate: [0, 360, 0],
@@ -34,8 +31,7 @@ export default function Sun() {
             transition: {
               duration: 1,
             },
-          }}
-        >
+          }}>
           <motion.circle cx="64" cy="63.997" fill="#F2A365" r="39.247" />
           <g fill="#ECECEC">
             <g>
