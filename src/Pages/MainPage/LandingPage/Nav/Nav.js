@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './Nav.module.scss';
-import { Link } from 'react-router-dom';
-import { useContextProvider } from '../../../../components/ContextProvider/Provider';
+// import { Link } from 'react-router-dom';
+// import { useContextProvider } from '../../../../components/ContextProvider/Provider';
 
 export default function Nav() {
-  const { isDarkTheme } = useContextProvider();
+  // const { isDarkTheme } = useContextProvider();
 
   return (
     <div className={styles.Nav}>

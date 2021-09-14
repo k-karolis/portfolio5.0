@@ -6,8 +6,8 @@ import { v4 as uuidv4 } from 'uuid';
 import { useContextProvider } from '../../../../../components/ContextProvider/Provider';
 import Modal from 'react-modal';
 import emailjs from 'emailjs-com';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 export default function SendMail() {
   const { isDarkTheme, setIsOpen, modalIsOpen } = useContextProvider();
@@ -57,27 +57,27 @@ export default function SendMail() {
     setIsOpen(false);
   };
 
-  const success = () =>
-    toast.dark('Sent!', {
-      position: 'top-center',
-      autoClose: 3000,
-      hideProgressBar: true,
-      closeOnClick: false,
-      pauseOnHover: false,
-      draggable: false,
-      progress: undefined,
-    });
+  // const success = () =>
+  //   toast.dark('Sent!', {
+  //     position: 'top-center',
+  //     autoClose: 3000,
+  //     hideProgressBar: true,
+  //     closeOnClick: false,
+  //     pauseOnHover: false,
+  //     draggable: false,
+  //     progress: undefined,
+  //   });
 
-  const errorPop = () =>
-    toast.dark('Error.', {
-      position: 'top-center',
-      autoClose: 3000,
-      hideProgressBar: true,
-      closeOnClick: false,
-      pauseOnHover: false,
-      draggable: false,
-      progress: undefined,
-    });
+  // const errorPop = () =>
+  //   toast.dark('Error.', {
+  //     position: 'top-center',
+  //     autoClose: 3000,
+  //     hideProgressBar: true,
+  //     closeOnClick: false,
+  //     pauseOnHover: false,
+  //     draggable: false,
+  //     progress: undefined,
+  //   });
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -91,14 +91,14 @@ export default function SendMail() {
       )
       .then(
         (result) => {
-          success();
+          // success();
           setTimeout(() => {
             setIsOpen(false);
             setIsSendingMail(false);
           }, 2000);
         },
         (error) => {
-          errorPop();
+          // errorPop();
         },
         e.target.reset()
       );
