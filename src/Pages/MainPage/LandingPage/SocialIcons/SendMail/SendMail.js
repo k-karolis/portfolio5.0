@@ -139,6 +139,7 @@ export default function SendMail() {
         </svg>
       </motion.div>
 
+      <motion.div></motion.div>
       <Modal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
