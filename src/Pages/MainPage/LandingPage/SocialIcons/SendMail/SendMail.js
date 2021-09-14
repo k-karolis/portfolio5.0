@@ -91,14 +91,14 @@ export default function SendMail() {
       )
       .then(
         (result) => {
-          // success();
+          console.log(result);
           setTimeout(() => {
             setIsOpen(false);
             setIsSendingMail(false);
           }, 2000);
         },
         (error) => {
-          // errorPop();
+          console.log(error);
         },
         e.target.reset()
       );
