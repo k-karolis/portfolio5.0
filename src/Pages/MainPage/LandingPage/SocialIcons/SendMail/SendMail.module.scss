@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: row;
   caret-color: $darkOrange;
+  width: 30vw;
 }
 
 .FormTitle {
@@ -27,10 +28,11 @@
 }
 
 .Inputs input {
+  width: 29vw;
   font-size: calc(1vw + 5px);
   margin: 5px;
   height: 30px;
-  width: 350px;
+
   background: transparent;
   border: none;
   color: rgba(255, 255, 255, 1);
@@ -38,10 +40,11 @@
 }
 
 .Inputs textarea {
+  width: 29vw;
   display: inline-block;
   min-height: 100px;
   min-height: 150px;
-  width: 350px;
+
   resize: vertical;
   background: transparent;
   border: none;
@@ -54,17 +57,17 @@
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-start;
-  transition: all 0.5s ease;
+  transition: $effects;
 }
 .Name .NameLabel {
   font-size: calc(1vw + 5px);
-  transition: all 0.5s ease;
+  transition: $effects;
   margin-bottom: -30px;
 }
 .NameInput:focus {
   margin-top: 30px;
   outline: none;
-  transition: all 0.5s ease;
+  transition: $effects;
   border-bottom: 1px solid $warmWhite;
 }
 
@@ -84,17 +87,17 @@ textarea:valid + label {
   outline: none;
   margin-top: 30px;
   border-bottom: 1px solid $brightOrange;
-  transition: all 0.5s ease;
+  transition: $effects;
 }
 
 .NameInput:focus:valid {
   border-bottom: 1px solid $brightOrange;
-  transition: all 0.5s ease;
+  transition: $effects;
 }
 
 .NameInput:invalid {
   outline: none;
-  transition: all 0.5s ease;
+  transition: $effects;
 }
 
 input:not(:placeholder-shown) {
@@ -103,7 +106,7 @@ input:not(:placeholder-shown) {
 
 .NameInput:focus:invalid {
   /* border-bottom: 1px solid $darkBlue; */
-  transition: all 0.5s ease;
+  transition: $effects;
 }
 
 input:required:invalid,
@@ -117,7 +120,7 @@ input:focus:invalid {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   width: 100%;
 }
 
@@ -129,11 +132,11 @@ input:focus:invalid {
   font-weight: 600;
   box-shadow: none;
   border: none;
-  transition: all 0.5s ease;
+  transition: $effects;
 }
 
 .Button input:hover {
   cursor: pointer;
   color: $brightOrange !important;
-  transition: all 0.5s ease;
+  transition: $effects;
 }
