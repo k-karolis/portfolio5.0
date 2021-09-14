@@ -1,0 +1,15 @@
+@import '../../../../index.module.scss';
+
+.Selfie img {
+  width: calc(10vw + 25px);
+  height: calc(10vw + 25px);
+  margin: 25px;
+  object-fit: cover;
+  border-radius: 100%;
+  transition: $effects;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  filter: brightness(0.8);
+}

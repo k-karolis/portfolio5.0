@@ -2,48 +2,38 @@
 
 .NameContainer {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  flex-direction: row;
+  align-items: flex-start;
   justify-content: center;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: 5rem;
-  height: 100vh;
 }
 
 .FirstName {
-  margin-right: 50px;
-  font-weight: 900;
-  letter-spacing: 15px;
-  line-height: 25px;
-  transition: $effects;
-  z-index: 10;
+  font-weight: 500;
+  letter-spacing: 10px;
+  font-size: calc(1vw + 25px);
 }
 
 .LastName {
-  margin-right: 25px;
-  font-weight: 300;
+  margin-left: 10px;
+  font-weight: 500;
   letter-spacing: 10px;
-  line-height: 50px;
-  transition: $effects;
-  z-index: 10;
+  font-size: calc(1vw + 25px);
 }
 
 .Title {
-  z-index: 10;
-  line-height: 45px;
+  display: flex;
+  flex-direction: row;
   letter-spacing: 2.5px;
+  // line-height: 50px;
   font-family: 'Caveat', cursive;
-  transition: $effects;
-  font-size: 3.5rem;
-  font-weight: 600;
+  font-size: calc(2vw + 15px);
 }
 
-.Underline {
-  z-index: 5;
-  height: 1px;
-  width: 100%;
-  margin-top: -10px;
+.Selfie img {
+  width: 25px;
+  flex: 1;
 }

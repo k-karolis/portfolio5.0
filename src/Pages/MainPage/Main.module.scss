@@ -13,8 +13,13 @@
 }
 
 .Main {
-  width: 100vw;
   height: 100vh;
+}
+
+.Nav {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 
 // .Toggle {

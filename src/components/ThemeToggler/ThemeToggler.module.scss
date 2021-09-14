@@ -8,19 +8,26 @@
 .Sun,
 .Moon {
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 5px;
   height: 25px;
   width: 25px;
 }
 
-.Corner {
+.BlueCorner,
+.WhiteCorner {
   position: fixed;
-  top: -75px;
-  right: -105px;
+  top: -100px;
+  right: -100px;
   height: 150px;
   width: 150px;
-  background-color: red;
-  transform: rotate(55deg);
+}
+.BlueCorner {
+  background-color: $darkBlue;
+  transition: $effects;
+}
+
+.WhiteCorner {
+  background-color: $warmWhite;
   transition: $effects;
 }

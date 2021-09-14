@@ -2,12 +2,19 @@
 
 .LandingPage {
   display: flex;
-  // width: 100vw;
-  // height: 100vh;
+  flex-direction: column;
+  width: 100vw;
+  height: 50vh;
   align-items: center;
   justify-content: center;
-  transition: $effects;
-  // background-color: $brightBlue;
+}
+
+.NameTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 65vw;
 }
 
 // .LightMode {

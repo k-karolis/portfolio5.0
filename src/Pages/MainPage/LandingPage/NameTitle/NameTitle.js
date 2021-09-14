@@ -1,6 +1,7 @@
 import styles from './NameTitle.module.scss';
 import { motion } from 'framer-motion';
 import { useContextProvider } from '../../../../components/ContextProvider/Provider';
+import SocialIcons from '../SocialIcons/SocialIcons';
 
 export default function NameTitle() {
   const { isDarkTheme } = useContextProvider();
@@ -26,15 +27,10 @@ export default function NameTitle() {
   };
 
   const titleVariant = {
-    visible: { opacity: 1, scale: 1 },
     hidden: {
       opacity: 0,
       x: 100,
     },
-  };
-
-  const underlineVariant = {
-    hidden: { opacity: 0, scale: 0, rotate: -3 },
   };
 
   return (
@@ -76,46 +72,26 @@ export default function NameTitle() {
           exit="hidden">
           {lastName}
         </motion.div>
-        <motion.div
-          className={styles.Title}
-          layout
-          variants={titleVariant}
-          initial="hidden"
-          animate={{
-            color: isDarkTheme ? 'rgb(236, 236, 236)' : 'rgb(34, 40, 49)',
-            opacity: 1,
-            rotate: -3,
-            x: 0,
-            transition: {
-              duration: 0.75,
-              delay: 0.1,
-              type: 'tween',
-            },
-          }}
-          exit="hidden">
-          {title}
-        </motion.div>
-        <motion.div
-          className={styles.Underline}
-          layout
-          variants={underlineVariant}
-          initial="hidden"
-          animate={{
-            backgroundColor: isDarkTheme
-              ? 'rgb(236, 236, 236)'
-              : 'rgb(34, 40, 49)',
-            opacity: 1,
-            rotate: -3,
-            scale: 1.1,
-            transition: {
-              duration: 1,
-              delay: 1.5,
-              type: 'tween',
-            },
-          }}
-          exit="hidden"
-        />
       </div>
+      <motion.div
+        className={styles.Title}
+        layout
+        variants={titleVariant}
+        initial="hidden"
+        animate={{
+          color: isDarkTheme ? 'rgb(242, 163, 101)' : 'rgb(158, 77, 13)',
+          opacity: 1,
+          x: 0,
+          transition: {
+            duration: 0.75,
+            delay: 0.1,
+            type: 'tween',
+          },
+        }}
+        exit="hidden">
+        {title}
+      </motion.div>
+      <SocialIcons />
     </div>
   );
 }

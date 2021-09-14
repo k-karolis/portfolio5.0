@@ -1,0 +1,57 @@
+@import '../../../../index.module.scss';
+
+.Nav {
+  width: 65vw;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Logo {
+  //   font-family: 'Inter', sans-serif;
+  font-size: calc(2vw + 15px);
+  font-weight: 900;
+}
+
+.Links {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 25vw;
+  justify-content: space-around;
+  font-size: calc(1vw + 10px);
+  font-family: 'Caveat', cursive;
+}
+
+.DarkLink,
+.WhiteLink {
+  cursor: pointer;
+  text-decoration: none;
+  transition: $effects;
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
+}
+.DarkLink {
+  color: $warmWhite;
+}
+
+.WhiteLink {
+  color: $darkBlue;
+}
+
+.DarkLink:hover {
+  color: $brightOrange;
+  transition: $effects;
+}
+
+.WhiteLink:hover {
+  color: $darkOrange;
+  transition: $effects;
+}

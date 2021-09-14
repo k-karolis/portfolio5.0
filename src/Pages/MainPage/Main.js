@@ -1,22 +1,38 @@
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import styles from './Main.module.scss';
-import LandingPage from './LandingPage/LandingPage';
-// import ProjectsPage from './ProjectsPage/ProjectsPage';
-import ThemeToggler from '../../components/ThemeToggler/ThemeToggler';
 import { useContextProvider } from '../../components/ContextProvider/Provider';
+import ThemeToggler from '../../components/ThemeToggler/ThemeToggler';
+
+import Nav from './LandingPage/Nav/Nav';
+import LandingPage from './LandingPage/LandingPage';
+import About from './About/About';
+import ProjectsPage from './ProjectsPage/ProjectsPage';
 
 export default function Main() {
   const { isDarkTheme } = useContextProvider();
 
   return (
     <div className={isDarkTheme ? styles.DarkMode : styles.LightMode}>
-      <div className={styles.Main}>
-        <ThemeToggler />
-        <LandingPage />
-      </div>
+      <Router>
+        <div className={styles.Main}>
+          <ThemeToggler />
+          <div className={styles.Nav}>
+            <Nav />
+          </div>
 
-      {/* <div className={styles.Projects}>
-        <ProjectsPage />
-      </div> */}
+          <Switch>
+            <Route exact path="/">
+              <LandingPage />
+            </Route>
+            <Route exact path="/about">
+              <About />
+            </Route>
+            <Route exact path="/projects">
+              <ProjectsPage />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }
