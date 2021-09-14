@@ -7,9 +7,7 @@ export default function LandingPage() {
   return (
     <div className={styles.LandingPage}>
       <div className={styles.NameTitle}>
-        <div className={styles.Selfie}>
-          <Selfie />
-        </div>
+        <Selfie />
         <NameTitle />
       </div>
     </div>

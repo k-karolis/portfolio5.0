@@ -14,7 +14,7 @@ export default function NameTitle() {
     visible: { opacity: 1, scale: 1 },
     hidden: {
       opacity: 0,
-      x: 50,
+      x: 75,
     },
   };
 

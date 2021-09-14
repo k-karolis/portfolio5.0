@@ -159,18 +159,23 @@ export default function SendMail() {
                 style={{
                   color: isDarkTheme ? 'rgb(236, 236, 236)' : 'rgb(48, 71, 94)',
                 }}>
-                <input
-                  className={formStyles.NameInput}
-                  style={{
-                    color: isDarkTheme
-                      ? 'rgb(236, 236, 236)'
-                      : 'rgb(48, 71, 94)',
-                  }}
-                  type="text"
-                  name="from_name"
-                  required
-                  placeholder=" "
-                />
+                <div
+                  className={
+                    isDarkTheme ? formStyles.DarkInputs : formStyles.LightInputs
+                  }>
+                  <input
+                    className={formStyles.NameInput}
+                    style={{
+                      color: isDarkTheme
+                        ? 'rgb(236, 236, 236)'
+                        : 'rgb(48, 71, 94)',
+                    }}
+                    type="text"
+                    name="from_name"
+                    required
+                    placeholder=" "
+                  />
+                </div>
                 <label className={formStyles.NameLabel}>Name</label>
               </div>
 
@@ -179,18 +184,23 @@ export default function SendMail() {
                 style={{
                   color: isDarkTheme ? 'rgb(236, 236, 236)' : 'rgb(48, 71, 94)',
                 }}>
-                <input
-                  className={formStyles.NameInput}
-                  style={{
-                    color: isDarkTheme
-                      ? 'rgb(236, 236, 236)'
-                      : 'rgb(48, 71, 94)',
-                  }}
-                  type="email"
-                  name="reply_to"
-                  required
-                  placeholder=" "
-                />
+                <div
+                  className={
+                    isDarkTheme ? formStyles.DarkInputs : formStyles.LightInputs
+                  }>
+                  <input
+                    className={formStyles.NameInput}
+                    style={{
+                      color: isDarkTheme
+                        ? 'rgb(236, 236, 236)'
+                        : 'rgb(48, 71, 94)',
+                    }}
+                    type="email"
+                    name="reply_to"
+                    required
+                    placeholder=" "
+                  />
+                </div>
                 <label className={formStyles.NameLabel}>E-Mail</label>
               </div>
 
@@ -199,16 +209,21 @@ export default function SendMail() {
                 style={{
                   color: isDarkTheme ? 'rgb(236, 236, 236)' : 'rgb(48, 71, 94)',
                 }}>
-                <textarea
-                  className={formStyles.NameInput}
-                  style={{
-                    color: isDarkTheme
-                      ? 'rgb(236, 236, 236)'
-                      : 'rgb(48, 71, 94)',
-                  }}
-                  name="message"
-                  required
-                />
+                <div
+                  className={
+                    isDarkTheme ? formStyles.DarkInputs : formStyles.LightInputs
+                  }>
+                  <textarea
+                    className={formStyles.NameInput}
+                    style={{
+                      color: isDarkTheme
+                        ? 'rgb(236, 236, 236)'
+                        : 'rgb(48, 71, 94)',
+                    }}
+                    name="message"
+                    required
+                  />
+                </div>
                 <label className={formStyles.NameLabel}>Message</label>
               </div>
             </div>

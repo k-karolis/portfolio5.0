@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: row;
   caret-color: $darkOrange;
-  width: 30vw;
+  width: calc(35vw + 50px);
 }
 
 .FormTitle {
@@ -27,29 +27,51 @@
   color: $warmWhite;
 }
 
-.Inputs input {
-  width: 29vw;
+.Inputs input,
+.Inputs textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none !important;
+  background-image: linear-gradient(transparent, transparent);
+  width: calc(34vw + 50px);
   font-size: calc(1vw + 5px);
-  margin: 5px;
-  height: 30px;
-
+  outline: none;
   background: transparent;
   border: none;
-  color: rgba(255, 255, 255, 1);
+}
+
+.DarkInputs input:-webkit-autofill,
+.DarkInputs input:-webkit-autofill:hover,
+.DarkInputs input:-webkit-autofill:focus,
+.DarkInputs input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px $darkBlue inset !important;
+  box-shadow: 0 0 0 30px $darkBlue inset !important;
+  -webkit-text-fill-color: $warmWhite !important;
+}
+
+.LightInputs input:-webkit-autofill,
+.LightInputs input:-webkit-autofill:hover,
+.LightInputs input:-webkit-autofill:focus,
+.LightInputs input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px $warmWhite inset !important;
+  box-shadow: 0 0 0 30px $warmWhite inset !important;
+  -webkit-text-fill-color: $darkBlue !important;
+}
+
+.Inputs input {
+  margin: 5px;
+  height: 30px;
+  color: $warmWhite;
   border-bottom: 1px solid $darkOrange;
 }
 
 .Inputs textarea {
-  width: 29vw;
   display: inline-block;
   min-height: 100px;
   min-height: 150px;
-
   resize: vertical;
-  background: transparent;
-  border: none;
-  font-size: calc(1vw + 5px);
-  color: rgba(255, 255, 255, 1);
+  color: $warmWhite;
   border-bottom: 1px solid $darkOrange;
 }
 
@@ -60,7 +82,7 @@
   transition: $effects;
 }
 .Name .NameLabel {
-  font-size: calc(1vw + 5px);
+  font-size: calc(1.25vw + 5px);
   transition: $effects;
   margin-bottom: -30px;
 }
@@ -126,7 +148,7 @@ input:focus:invalid {
 
 .Button input {
   font-family: 'Caveat', cursive;
-  font-size: calc(1vw + 10px);
+  font-size: calc(2vw + 10px);
   background-color: transparent;
   color: $warmWhite;
   font-weight: 600;
@@ -139,4 +161,24 @@ input:focus:invalid {
   cursor: pointer;
   color: $brightOrange !important;
   transition: $effects;
+}
+
+@media screen and (max-width: 500px) {
+  .Form {
+    width: calc(50vw + 50px);
+  }
+  .FormTitle {
+    font-size: calc(2vw + 20px);
+  }
+  .Inputs textarea,
+  .Inputs input {
+    width: calc(47vw + 50px);
+    font-size: calc(2vw + 5px);
+  }
+  .Name .NameLabel {
+    font-size: calc(1.5vw + 5px);
+  }
+  .Button input {
+    font-size: calc(3vw + 5px);
+  }
 }

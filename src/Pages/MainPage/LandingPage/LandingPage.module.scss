@@ -14,7 +14,13 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 65vw;
+  // width: 65vw;
+}
+
+@media screen and (max-width: 500px) {
+  .NameTitle {
+    flex-direction: column;
+  }
 }
 
 // .LightMode {
