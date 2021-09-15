@@ -1,13 +1,17 @@
 @import '../../../../index.module.scss';
 
+.Image {
+  transition: $effects;
+}
+
 .Selfie img {
   width: calc(10vw + 100px);
   height: calc(10vw + 100px);
   max-width: 200px;
   max-height: 200px;
   margin: 25px;
-  object-fit: cover;
-  border-radius: 100%;
+  // object-fit: cover;
+  // border-radius: 100%;
   transition: $effects;
   -webkit-user-select: none;
   -moz-user-select: none;
