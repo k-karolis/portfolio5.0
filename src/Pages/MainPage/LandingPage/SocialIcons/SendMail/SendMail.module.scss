@@ -9,8 +9,9 @@
 .FormTitle {
   display: flex;
   justify-content: center;
-  font-family: 'Caveat', cursive;
-  font-size: calc(2vw + 10px);
+  // font-family: 'Caveat', cursive;
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: calc(1.5vw + 10px);
 }
 
 .Labels {
@@ -161,7 +162,8 @@ input:focus:invalid {
 }
 
 .Button input {
-  font-family: 'Caveat', cursive;
+  // font-family: 'Caveat', cursive;
+  font-family: 'Nothing You Could Do', cursive;
   font-size: calc(1vw + 10px);
   background-color: transparent;
   color: $warmWhite;

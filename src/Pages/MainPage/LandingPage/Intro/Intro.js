@@ -73,19 +73,52 @@ export default function Intro() {
                 delay: 1,
               },
             }}>
-            <article>
+            <motion.article
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+                transition: {
+                  duration: 0.5,
+                  delay: 1,
+                  type: 'tween',
+                },
+              }}>
               Hi there, my name is Karolis and I am Front End Web Developer.
-            </article>
+            </motion.article>
             <br />
-            <article>
+            <motion.article
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+                transition: {
+                  duration: 0.5,
+                  delay: 1.25,
+                  type: 'tween',
+                },
+              }}>
               Currently working at Move The Masses Charity and developing user
               facing web applications so volunteers can reach out to even more
               people in need of help and support.
-            </article>
+            </motion.article>
             <br />
-            <article>
+            <motion.article
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+                transition: {
+                  duration: 0.5,
+                  delay: 1.5,
+                  type: 'tween',
+                },
+              }}>
               I love using JavaScript and building React applications.
-            </article>
+            </motion.article>
             <br />
             <div className={styles.Tech}>
               {techList.map((item, key) => {
