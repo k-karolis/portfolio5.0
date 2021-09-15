@@ -3,14 +3,14 @@
   display: flex;
   flex-direction: row;
   caret-color: $darkOrange;
-  width: calc(35vw + 50px);
+  width: calc(25vw + 50px);
 }
 
 .FormTitle {
   display: flex;
   justify-content: center;
   font-family: 'Caveat', cursive;
-  font-size: calc(3vw + 10px);
+  font-size: calc(2vw + 10px);
 }
 
 .Labels {
@@ -34,11 +34,20 @@
   appearance: none;
   box-shadow: none !important;
   background-image: linear-gradient(transparent, transparent);
-  width: calc(34vw + 50px);
+  width: calc(24vw + 50px);
   font-size: calc(1vw + 5px);
   outline: none;
   background: transparent;
   border: none;
+}
+
+.DarkInputs input,
+.LightInputs input,
+.DarkInputs textarea,
+.LightInputs textarea {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-appearance: none;
 }
 
 .DarkInputs input:-webkit-autofill,
@@ -48,6 +57,9 @@
   -webkit-box-shadow: 0 0 0 30px $darkBlue inset !important;
   box-shadow: 0 0 0 30px $darkBlue inset !important;
   -webkit-text-fill-color: $warmWhite !important;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-appearance: none;
 }
 
 .LightInputs input:-webkit-autofill,
@@ -57,6 +69,9 @@
   -webkit-box-shadow: 0 0 0 30px $warmWhite inset !important;
   box-shadow: 0 0 0 30px $warmWhite inset !important;
   -webkit-text-fill-color: $darkBlue !important;
+  -webkit-border-radius: 0px;
+  -webkit-appearance: none;
+  border-radius: 0px;
 }
 
 .Inputs input {
@@ -82,7 +97,7 @@
   transition: $effects;
 }
 .Name .NameLabel {
-  font-size: calc(1.25vw + 5px);
+  font-size: calc(0.75vw + 5px);
   transition: $effects;
   margin-bottom: -30px;
 }
@@ -143,18 +158,18 @@ input:focus:invalid {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
 }
 
 .Button input {
   font-family: 'Caveat', cursive;
-  font-size: calc(2vw + 10px);
+  font-size: calc(1vw + 10px);
   background-color: transparent;
   color: $warmWhite;
   font-weight: 600;
   box-shadow: none;
   border: none;
   transition: $effects;
+  width: 100px;
 }
 
 .Button input:hover {

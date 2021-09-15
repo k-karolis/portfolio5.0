@@ -1,7 +1,9 @@
 $darkBlue: rgb(34, 40, 49);
 $brightBlue: rgb(48, 71, 94);
+
 $brightOrange: rgb(242, 163, 101);
 $darkOrange: rgb(158, 77, 13);
+
 $warmWhite: rgb(236, 236, 236);
 
 $effects: all 0.6s cubic-bezier(0.42, 0, 0.58, 1);
@@ -19,15 +21,12 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 100vw;
-  height: 100vh;
+  height: 100%;
   font-family: 'Inter', sans-serif;
 }
 
 html {
   font-size: 62.5%;
-  width: 100vw;
-  height: 100vh;
 }
 
 p {

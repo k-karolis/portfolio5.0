@@ -11,18 +11,16 @@ export default function NameTitle() {
   const title = 'Front End Web Developer';
 
   const firstVariant = {
-    visible: { opacity: 1, scale: 1 },
     hidden: {
       opacity: 0,
-      x: 75,
+      x: 100,
     },
   };
 
   const lastVariant = {
-    visible: { opacity: 1, scale: 1 },
     hidden: {
       opacity: 0,
-      x: -75,
+      x: -100,
     },
   };
 

@@ -7,7 +7,6 @@ import { useContextProvider } from '../../../../../components/ContextProvider/Pr
 import Modal from 'react-modal';
 import emailjs from 'emailjs-com';
 // import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
 
 export default function SendMail() {
   const { isDarkTheme, setIsOpen, modalIsOpen } = useContextProvider();
@@ -234,7 +233,7 @@ export default function SendMail() {
             {isSendingMail ? (
               <input
                 type="button"
-                defaultValue="Thank you, mail has been sent!"
+                defaultValue="Sent!"
                 onClick={closeModal}
                 style={{
                   color: isDarkTheme ? 'rgb(236, 236, 236)' : 'rgb(48, 71, 94)',

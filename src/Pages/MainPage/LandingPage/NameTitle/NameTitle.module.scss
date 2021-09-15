@@ -1,34 +1,37 @@
 @import '../../../../index.module.scss';
 
-.NameContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
+.NameContainer,
+.Title {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
 
+.NameContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .FirstName {
   font-weight: 500;
   letter-spacing: 10px;
-  font-size: calc(1vw + 25px);
+  font-size: calc(1vw + 20px);
 }
 
 .LastName {
   margin-left: 10px;
   font-weight: 500;
   letter-spacing: 10px;
-  font-size: calc(1vw + 25px);
+  font-size: calc(1vw + 20px);
 }
 
 .Title {
   display: flex;
   flex-direction: row;
   letter-spacing: 2.5px;
-  // line-height: 50px;
   font-family: 'Caveat', cursive;
-  font-size: calc(2vw + 15px);
+  font-size: calc(1vw + 20px);
 }

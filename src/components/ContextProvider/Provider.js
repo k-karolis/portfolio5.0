@@ -11,6 +11,13 @@ export const Provider = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(themeMode);
   const [modalIsOpen, setIsOpen] = useState(false);
 
+  document.body.insertAdjacentHTML(
+    'beforeend',
+    isDarkTheme
+      ? `<style>body{background:rgb(34, 40, 49)}</style>`
+      : `<style>body{background:rgb(236, 236, 236)}</style>`
+  );
+
   const value = { isDarkTheme, setIsDarkTheme, modalIsOpen, setIsOpen };
 
   return <Context.Provider value={value}>{children}</Context.Provider>;

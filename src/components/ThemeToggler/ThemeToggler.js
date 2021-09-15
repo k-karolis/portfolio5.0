@@ -3,16 +3,12 @@ import styles from './ThemeToggler.module.scss';
 import Sun from '../../assets/Sun';
 import Moon from '../../assets/Moon';
 import { motion, AnimatePresence } from 'framer-motion';
-import useSound from 'use-sound';
-import light from '../../assets/light.mp3';
 import { useContextProvider } from '../ContextProvider/Provider';
 
 export default function ThemeToggler() {
   const { isDarkTheme, setIsDarkTheme } = useContextProvider();
 
   const [isCorner, setIsCorner] = useState(true);
-
-  const [on] = useSound(light, { volume: 0.1 });
 
   const duration = 1.1;
 
@@ -32,7 +28,6 @@ export default function ThemeToggler() {
     <AnimatePresence exitBeforeEnter>
       <div
         onClick={() => {
-          on();
           setIsDarkTheme(!isDarkTheme);
           setIsCorner(!isCorner);
         }}

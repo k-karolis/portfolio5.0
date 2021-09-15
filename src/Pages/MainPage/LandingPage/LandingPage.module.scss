@@ -3,10 +3,8 @@
 .LandingPage {
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: 50vh;
-  align-items: center;
-  justify-content: center;
+  height: 100%;
+  justify-content: flex-start;
 }
 
 .NameTitle {
@@ -14,7 +12,19 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  // width: 65vw;
+}
+
+.Intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.SiteLink {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 25vh;
 }
 
 @media screen and (max-width: 500px) {

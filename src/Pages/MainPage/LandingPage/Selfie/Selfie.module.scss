@@ -3,8 +3,8 @@
 .Selfie img {
   width: calc(10vw + 100px);
   height: calc(10vw + 100px);
-  //   max-width: calc(25vw - 50px);
-  //   max-height: calc(25vw - 50px);
+  max-width: 200px;
+  max-height: 200px;
   margin: 25px;
   object-fit: cover;
   border-radius: 100%;
