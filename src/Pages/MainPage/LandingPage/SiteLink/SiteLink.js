@@ -22,8 +22,8 @@ export default function SiteLink() {
           color: isDarkTheme ? 'rgb(242, 163, 101)' : 'rgb(158, 77, 13)',
           opacity: 1,
           transition: {
-            duration: 0.5,
-            delay: 0.5,
+            duration: 2,
+            delay: 2,
             type: 'tween',
           },
         }}

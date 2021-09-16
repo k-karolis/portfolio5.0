@@ -44,10 +44,8 @@ export default function Intro() {
         key={1}
         initial={{
           opacity: 0,
-          width: '0px',
         }}
         animate={{
-          width: 'calc(25vw + 250px)',
           opacity: 1,
           transition: {
             duration: 1,
@@ -59,116 +57,114 @@ export default function Intro() {
         onAnimationComplete={() => {
           setIsBorderWide(true);
         }}>
-        {isBorderWide ? (
-          <motion.div
-            key={2}
-            className={styles.Intro}
+        <motion.div
+          key={2}
+          className={styles.Intro}
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+            transition: {
+              duration: 1,
+              // delay: 1,
+            },
+          }}>
+          <motion.article
             initial={{
               opacity: 0,
             }}
             animate={{
               opacity: 1,
               transition: {
-                duration: 1,
+                duration: 0.5,
                 delay: 1,
+                type: 'tween',
               },
             }}>
-            <motion.article
-              initial={{
-                opacity: 0,
-              }}
-              animate={{
-                opacity: 1,
-                transition: {
-                  duration: 0.5,
-                  delay: 1,
-                  type: 'tween',
-                },
-              }}>
-              Hi there, my name is Karolis and I am Front End Web Developer.
-            </motion.article>
-            <br />
-            <motion.article
-              initial={{
-                opacity: 0,
-              }}
-              animate={{
-                opacity: 1,
-                transition: {
-                  duration: 0.5,
-                  delay: 1.25,
-                  type: 'tween',
-                },
-              }}>
-              Currently working at Move The Masses Charity and developing user
-              facing web applications so volunteers can reach out to even more
-              people in need of help and support.
-            </motion.article>
-            <br />
-            <motion.article
-              initial={{
-                opacity: 0,
-              }}
-              animate={{
-                opacity: 1,
-                transition: {
-                  duration: 0.5,
-                  delay: 1.5,
-                  type: 'tween',
-                },
-              }}>
-              I love using JavaScript and building React applications.
-            </motion.article>
-            <br />
-            <div className={styles.Tech}>
-              {techList.map((item, key) => {
-                const randomPos = Math.floor(
-                  Math.random() * (max - min + 1) + min
-                );
-                const randomNeg = Math.floor(
-                  Math.random() * (max - minNeg + 1) + minNeg
-                );
-                return (
-                  <motion.span
-                    key={key}
-                    variants={techs}
-                    initial={{
-                      opacity: 0,
-                      y: randomPos,
-                      x: randomNeg * 5,
-                    }}
-                    animate={{
-                      opacity: 1,
-                      y: 0,
-                      x: 0,
-                      transition: {
-                        delay: randomPos / 5,
-                        duration: 0.75,
-                        type: 'tween',
-                      },
-                    }}
-                    exit="hidden">
-                    {item}
-                  </motion.span>
-                );
-              })}
-            </div>
-          </motion.div>
-        ) : (
+            Hi there, my name is Karolis and I am Front End Web Developer.
+          </motion.article>
+          <br />
           <motion.article
-            key={2}
-            className={styles.Intro}
             initial={{
               opacity: 0,
             }}
             animate={{
               opacity: 1,
               transition: {
-                duration: 1,
-                delay: 1,
+                duration: 0.5,
+                delay: 1.25,
+                type: 'tween',
               },
-            }}></motion.article>
-        )}
+            }}>
+            Currently working at Move The Masses Charity and developing user
+            facing web applications so volunteers can reach out to people in
+            need of help and support.
+          </motion.article>
+          <br />
+          <motion.article
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+              transition: {
+                duration: 0.5,
+                delay: 1.5,
+                type: 'tween',
+              },
+            }}>
+            I love using JavaScript and building React applications.
+          </motion.article>
+          <br />
+          <motion.div
+            className={styles.Tech}
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+              transition: {
+                delay: 2,
+              },
+            }}
+            exit={{ opacity: 0 }}>
+            {techList.map((item, key) => {
+              const randomPos = Math.floor(
+                Math.random() * (max - min + 1) + min
+              );
+              const randomNeg = Math.floor(
+                Math.random() * (max - minNeg + 1) + minNeg
+              );
+              return (
+                <motion.span
+                  key={key}
+                  variants={techs}
+                  initial={{
+                    opacity: 0,
+                    y: randomPos * 5,
+                    x: randomNeg * 5,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                    x: 0,
+                    color: isDarkTheme
+                      ? 'rgb(242, 163, 101)'
+                      : 'rgb(158, 77, 13)',
+                    transition: {
+                      delay: 1 + randomPos / 5,
+                      duration: 1,
+                      type: 'tween',
+                    },
+                  }}
+                  exit="hidden">
+                  {item}
+                </motion.span>
+              );
+            })}
+          </motion.div>
+        </motion.div>
       </motion.div>
     </div>
   );

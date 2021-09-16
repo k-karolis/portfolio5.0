@@ -16,25 +16,23 @@ export default function Selfie() {
 
   return (
     <div className={styles.Selfie}>
-      <AnimatePresence>
-        <motion.img
-          key={1}
-          className={styles.Image}
-          src={isDarkTheme ? selfDark : selfLight}
-          alt=""
-          variants={self}
-          initial="hidden"
-          animate={{
-            color: isDarkTheme ? 'rgb(242, 163, 101)' : 'rgb(158, 77, 13)',
-            opacity: 1,
-            transition: {
-              duration: 0.75,
-              type: 'tween',
-            },
-          }}
-          exit="hidden"
-        />
-      </AnimatePresence>
+      <motion.img
+        key={1}
+        className={styles.Image}
+        src={isDarkTheme ? selfDark : selfLight}
+        alt=""
+        variants={self}
+        initial="hidden"
+        animate={{
+          color: isDarkTheme ? 'rgb(242, 163, 101)' : 'rgb(158, 77, 13)',
+          opacity: 1,
+          transition: {
+            duration: 1,
+            type: 'tween',
+          },
+        }}
+        exit="hidden"
+      />
     </div>
   );
 }

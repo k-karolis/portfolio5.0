@@ -33,9 +33,9 @@ export default function SendMail() {
       borderColor: isDarkTheme ? 'rgb(158, 77, 13)' : 'rgb(34, 40, 49)',
     },
     overlay: {
-      backgroundColor: isDarkTheme
-        ? 'rgba(34, 40, 49, 0.75)'
-        : 'rgba(236, 236, 236, 0.75)',
+      backgroundColor: !isDarkTheme
+        ? 'rgba(34, 40, 49, 0.25)'
+        : 'rgba(236, 236, 236, 0.25)',
     },
   };
 
