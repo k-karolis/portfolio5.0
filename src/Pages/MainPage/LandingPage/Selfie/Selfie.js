@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Selfie.module.scss';
 import selfDark from '../../../../assets/selfDark.png';
 import selfLight from '../../../../assets/selfLight.png';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useContextProvider } from '../../../../components/ContextProvider/Provider';
 
 const self = {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import styles from './Intro.module.scss';
 import { motion } from 'framer-motion';
@@ -35,7 +35,6 @@ export default function Intro() {
   const minNeg = -techList.length;
   const max = techList.length;
 
-  const [isBorderWide, setIsBorderWide] = useState(false);
   return (
     <div>
       <motion.div
@@ -53,9 +52,6 @@ export default function Intro() {
             type: 'tween',
           },
           color: isDarkTheme ? 'rgb(236, 236, 236)' : 'rgb(34, 40, 49)',
-        }}
-        onAnimationComplete={() => {
-          setIsBorderWide(true);
         }}>
         <motion.div
           key={2}
