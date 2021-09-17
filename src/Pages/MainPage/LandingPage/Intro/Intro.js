@@ -14,6 +14,12 @@ export default function Intro() {
     },
   };
 
+  const intro = [
+    'Hi there, my name is Karolis and I am Front End Web Developer.',
+    'Currently working at Move The Masses Charity and developing user facing web applications so volunteers can reach out to people in need of help and support.',
+    'I love using JavaScript and building React applications.',
+  ];
+
   const techList = [
     'JavaScript',
     'React',
@@ -40,7 +46,6 @@ export default function Intro() {
       <motion.div
         className={styles.BackGround}
         layout
-        key={1}
         initial={{
           opacity: 0,
         }}
@@ -53,65 +58,31 @@ export default function Intro() {
           },
           color: isDarkTheme ? 'rgb(236, 236, 236)' : 'rgb(34, 40, 49)',
         }}>
-        <motion.div
-          key={2}
-          className={styles.Intro}
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-            transition: {
-              duration: 1,
-              // delay: 1,
-            },
-          }}>
-          <motion.article
-            initial={{
-              opacity: 0,
-            }}
-            animate={{
-              opacity: 1,
-              transition: {
-                duration: 0.5,
-                delay: 1,
-                type: 'tween',
-              },
-            }}>
-            Hi there, my name is Karolis and I am Front End Web Developer.
-          </motion.article>
-          <br />
-          <motion.article
-            initial={{
-              opacity: 0,
-            }}
-            animate={{
-              opacity: 1,
-              transition: {
-                duration: 0.5,
-                delay: 1.25,
-                type: 'tween',
-              },
-            }}>
-            Currently working at Move The Masses Charity and developing user
-            facing web applications so volunteers can reach out to people in
-            need of help and support.
-          </motion.article>
-          <br />
-          <motion.article
-            initial={{
-              opacity: 0,
-            }}
-            animate={{
-              opacity: 1,
-              transition: {
-                duration: 0.5,
-                delay: 1.5,
-                type: 'tween',
-              },
-            }}>
-            I love using JavaScript and building React applications.
-          </motion.article>
+        <div className={styles.Intro}>
+          {intro.map((item, key) => {
+            return (
+              <motion.article
+                key={key}
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  color: isDarkTheme ? 'rgb(236, 236, 236)' : 'rgb(34, 40, 49)',
+                  opacity: 1,
+                  transition: {
+                    duration: 1,
+                    delay: key / 2,
+                    type: 'tween',
+                  },
+                }}
+                exit={{ opacity: 0 }}>
+                <br />
+                {item}
+                <br />
+              </motion.article>
+            );
+          })}
+
           <br />
           <motion.div
             className={styles.Tech}
@@ -125,42 +96,47 @@ export default function Intro() {
               },
             }}
             exit={{ opacity: 0 }}>
-            {techList.map((item, key) => {
-              const randomPos = Math.floor(
-                Math.random() * (max - min + 1) + min
-              );
-              const randomNeg = Math.floor(
-                Math.random() * (max - minNeg + 1) + minNeg
-              );
-              return (
-                <motion.span
-                  key={key}
-                  variants={techs}
-                  initial={{
-                    opacity: 0,
-                    y: randomPos * 5,
-                    x: randomNeg * 5,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                    x: 0,
-                    color: isDarkTheme
-                      ? 'rgb(242, 163, 101)'
-                      : 'rgb(158, 77, 13)',
-                    transition: {
-                      delay: 1 + randomPos / 5,
-                      duration: 1,
-                      type: 'tween',
-                    },
-                  }}
-                  exit="hidden">
-                  {item}
-                </motion.span>
-              );
-            })}
+            <motion.div>
+              {techList.map((item, key) => {
+                const randomPos = Math.floor(
+                  Math.random() * (max - min + 1) + min
+                );
+                const randomNeg = Math.floor(
+                  Math.random() * (max - minNeg + 1) + minNeg
+                );
+                return (
+                  <motion.span
+                    key={key}
+                    initial={{
+                      opacity: 0,
+                      y: randomPos * 5,
+                      x: randomNeg * 5,
+                    }}
+                    animate={{
+                      opacity: 1,
+                      y: 0,
+                      x: 0,
+                      color: isDarkTheme
+                        ? 'rgb(242, 163, 101)'
+                        : 'rgb(158, 77, 13)',
+                      transition: {
+                        delay: 1 + randomPos / 4,
+                        duration: 1,
+                        type: 'tween',
+                      },
+                    }}
+                    exit={{
+                      opacity: 0,
+                      y: randomPos * 5,
+                      x: randomNeg * 5,
+                    }}>
+                    {item}
+                  </motion.span>
+                );
+              })}
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </motion.div>
     </div>
   );
