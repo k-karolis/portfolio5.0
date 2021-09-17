@@ -7,13 +7,6 @@ import { useContextProvider } from '../../../../components/ContextProvider/Provi
 export default function Intro() {
   const { isDarkTheme } = useContextProvider();
 
-  const techs = {
-    hidden: {
-      opacity: 0,
-      y: 35,
-    },
-  };
-
   const intro = [
     'Hi there, my name is Karolis and I am Front End Web Developer.',
     'Currently working at Move The Masses Charity and developing user facing web applications so volunteers can reach out to people in need of help and support.',
