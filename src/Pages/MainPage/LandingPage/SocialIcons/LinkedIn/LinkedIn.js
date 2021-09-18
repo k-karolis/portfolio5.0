@@ -17,7 +17,7 @@ export default function LinkedIn() {
   return (
     <div>
       <a
-        href="https://www.linkedin.com/in/karoliskimtys/"
+        href="https://www.linkedin.com/in/karolis-kimtys/"
         target="_blank"
         rel="noopener noreferrer">
         <motion.div

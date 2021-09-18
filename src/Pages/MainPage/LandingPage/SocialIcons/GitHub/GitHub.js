@@ -17,7 +17,7 @@ export default function GitHub() {
   return (
     <div>
       <a
-        href="https://github.com/k-karolis"
+        href="https://github.com/karolis-kimtys/"
         target="_blank"
         rel="noopener noreferrer">
         <motion.div
