@@ -3,7 +3,7 @@ import styles from "./LandingPage.module.scss";
 import NameTitle from "./NameTitle/NameTitle";
 import Selfie from "./Selfie/Selfie";
 import Intro from "./Intro/Intro";
-import SiteLink from "./SiteLink/SiteLink";
+// import SiteLink from "./SiteLink/SiteLink";
 
 export default function LandingPage() {
   return (
