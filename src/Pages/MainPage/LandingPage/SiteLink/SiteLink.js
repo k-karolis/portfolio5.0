@@ -1,7 +1,7 @@
-import React from 'react';
-import styles from './SiteLink.module.scss';
-import { motion } from 'framer-motion';
-import { useContextProvider } from '../../../../components/ContextProvider/Provider';
+import React from "react";
+import styles from "./SiteLink.module.scss";
+import { motion } from "framer-motion";
+import { useContextProvider } from "../../../../components/ContextProvider/Provider";
 
 const link = {
   hidden: {
@@ -19,12 +19,12 @@ export default function SiteLink() {
         variants={link}
         initial="hidden"
         animate={{
-          color: isDarkTheme ? 'rgb(242, 163, 101)' : 'rgb(158, 77, 13)',
+          color: isDarkTheme ? "rgb(242, 163, 101)" : "rgb(158, 77, 13)",
           opacity: 1,
           transition: {
             duration: 2,
             delay: 2,
-            type: 'tween',
+            type: "tween",
           },
         }}
         exit="hidden">

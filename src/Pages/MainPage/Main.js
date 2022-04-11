@@ -1,12 +1,12 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import styles from './Main.module.scss';
-import { useContextProvider } from '../../components/ContextProvider/Provider';
-import ThemeToggler from '../../components/ThemeToggler/ThemeToggler';
+import { BrowserRouter as Router, Switch } from "react-router-dom";
+import styles from "./Main.module.scss";
+import { useContextProvider } from "../../components/ContextProvider/Provider";
+import ThemeToggler from "../../components/ThemeToggler/ThemeToggler";
 
-import Nav from './LandingPage/Nav/Nav';
-import LandingPage from './LandingPage/LandingPage';
-import About from './About/About';
-import ProjectsPage from './ProjectsPage/ProjectsPage';
+import Nav from "./LandingPage/Nav/Nav";
+import LandingPage from "./LandingPage/LandingPage";
+// import About from "./About/About";
+// import ProjectsPage from "./ProjectsPage/ProjectsPage";
 
 export default function Main() {
   const { isDarkTheme } = useContextProvider();
@@ -21,15 +21,15 @@ export default function Main() {
           </div>
 
           <Switch>
-            <Route exact path="/">
-              <LandingPage />
-            </Route>
-            <Route exact path="/about">
+            {/* <Route exact path="/"> */}
+            <LandingPage />
+            {/* </Route> */}
+            {/* <Route exact path="/about">
               <About />
             </Route>
             <Route exact path="/projects">
               <ProjectsPage />
-            </Route>
+            </Route> */}
           </Switch>
         </div>
       </Router>

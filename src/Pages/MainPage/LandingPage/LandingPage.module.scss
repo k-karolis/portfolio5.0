@@ -1,4 +1,4 @@
-@import '../../../index.module.scss';
+@import "../../../index.module.scss";
 
 .LandingPage {
   display: flex;
@@ -22,9 +22,10 @@
 
 .SiteLink {
   display: flex;
-  align-items: flex-end;
+  width: 100%;
+  // align-items: flex-end;
   justify-content: center;
-  height: 25vh;
+  // height: 25vh;
 }
 
 @media screen and (max-width: 500px) {
