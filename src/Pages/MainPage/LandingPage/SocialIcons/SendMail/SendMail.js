@@ -1,12 +1,13 @@
-import styles from '../Social.module.scss';
-import formStyles from './SendMail.module.scss';
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { v4 as uuidv4 } from 'uuid';
-import { useContextProvider } from '../../../../../components/ContextProvider/Provider';
-import Modal from 'react-modal';
-import emailjs from 'emailjs-com';
+import styles from "../Social.module.scss";
+import formStyles from "./SendMail.module.scss";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { v4 as uuidv4 } from "uuid";
+import { useContextProvider } from "../../../../../components/ContextProvider/Provider";
+import Modal from "react-modal";
+import emailjs from "emailjs-com";
 // import { ToastContainer, toast } from 'react-toastify';
+import ReactTooltip from "react-tooltip";
 
 export default function SendMail() {
   const { isDarkTheme, setIsOpen, modalIsOpen } = useContextProvider();
@@ -23,30 +24,30 @@ export default function SendMail() {
 
   const customStyles = {
     content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-      backgroundColor: isDarkTheme ? 'rgb(34, 40, 49)' : 'rgb(236, 236, 236)',
-      borderColor: isDarkTheme ? 'rgb(158, 77, 13)' : 'rgb(34, 40, 49)',
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      backgroundColor: isDarkTheme ? "rgb(34, 40, 49)" : "rgb(236, 236, 236)",
+      borderColor: isDarkTheme ? "rgb(158, 77, 13)" : "rgb(34, 40, 49)",
     },
     overlay: {
       backgroundColor: !isDarkTheme
-        ? 'rgba(34, 40, 49, 0.25)'
-        : 'rgba(236, 236, 236, 0.25)',
+        ? "rgba(34, 40, 49, 0.25)"
+        : "rgba(236, 236, 236, 0.25)",
     },
   };
 
-  Modal.setAppElement('#root');
+  Modal.setAppElement("#root");
 
   let subtitle;
 
   function afterOpenModal() {
     subtitle.style.color = isDarkTheme
-      ? 'rgb(236, 236, 236)'
-      : 'rgb(48, 71, 94)';
+      ? "rgb(236, 236, 236)"
+      : "rgb(48, 71, 94)";
   }
   const openModal = () => {
     setIsOpen(true);
@@ -83,10 +84,10 @@ export default function SendMail() {
     setIsSendingMail(true);
     emailjs
       .sendForm(
-        'service_d07urrd',
-        'mygmailID',
+        "service_d07urrd",
+        "mygmailID",
         e.target,
-        'user_AL1JEdnHyTfi8RdDP4CaU'
+        "user_AL1JEdnHyTfi8RdDP4CaU"
       )
       .then(
         (result) => {
@@ -105,7 +106,10 @@ export default function SendMail() {
 
   return (
     <div>
+      <ReactTooltip effect="solid" place="bottom" type="dark" />
+
       <motion.div
+        data-tip="E-Mail Me"
         className={styles.Mail}
         key={uuidv4()}
         variants={icons}
@@ -116,7 +120,7 @@ export default function SendMail() {
           transition: {
             delay: 0.2,
             duration: 0.5,
-            type: 'tween',
+            type: "tween",
           },
         }}
         exit="hidden"
@@ -125,7 +129,7 @@ export default function SendMail() {
         onClick={openModal}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 299.997 299.997">
           <path
-            fill={isDarkTheme ? 'rgb(236, 236, 236)' : 'rgb(158, 77, 13)'}
+            fill={isDarkTheme ? "rgb(236, 236, 236)" : "rgb(158, 77, 13)"}
             d="M149.996,0C67.157,0,0.001,67.158,0.001,149.997c0,82.837,67.156,150,149.995,150s150-67.163,150-150
               C299.996,67.158,232.835,0,149.996,0z M149.999,52.686l88.763,55.35H61.236L149.999,52.686z M239.868,196.423h-0.009
               c0,8.878-7.195,16.072-16.072,16.072H76.211c-8.878,0-16.072-7.195-16.072-16.072v-84.865c0-0.939,0.096-1.852,0.252-2.749
@@ -157,7 +161,7 @@ export default function SendMail() {
               <div
                 className={formStyles.Name}
                 style={{
-                  color: isDarkTheme ? 'rgb(236, 236, 236)' : 'rgb(48, 71, 94)',
+                  color: isDarkTheme ? "rgb(236, 236, 236)" : "rgb(48, 71, 94)",
                 }}>
                 <div
                   className={
@@ -167,8 +171,8 @@ export default function SendMail() {
                     className={formStyles.NameInput}
                     style={{
                       color: isDarkTheme
-                        ? 'rgb(236, 236, 236)'
-                        : 'rgb(48, 71, 94)',
+                        ? "rgb(236, 236, 236)"
+                        : "rgb(48, 71, 94)",
                     }}
                     type="text"
                     name="from_name"
@@ -182,7 +186,7 @@ export default function SendMail() {
               <div
                 className={formStyles.Name}
                 style={{
-                  color: isDarkTheme ? 'rgb(236, 236, 236)' : 'rgb(48, 71, 94)',
+                  color: isDarkTheme ? "rgb(236, 236, 236)" : "rgb(48, 71, 94)",
                 }}>
                 <div
                   className={
@@ -192,8 +196,8 @@ export default function SendMail() {
                     className={formStyles.NameInput}
                     style={{
                       color: isDarkTheme
-                        ? 'rgb(236, 236, 236)'
-                        : 'rgb(48, 71, 94)',
+                        ? "rgb(236, 236, 236)"
+                        : "rgb(48, 71, 94)",
                     }}
                     type="email"
                     name="reply_to"
@@ -207,7 +211,7 @@ export default function SendMail() {
               <div
                 className={formStyles.Name}
                 style={{
-                  color: isDarkTheme ? 'rgb(236, 236, 236)' : 'rgb(48, 71, 94)',
+                  color: isDarkTheme ? "rgb(236, 236, 236)" : "rgb(48, 71, 94)",
                 }}>
                 <div
                   className={
@@ -217,8 +221,8 @@ export default function SendMail() {
                     className={formStyles.NameInput}
                     style={{
                       color: isDarkTheme
-                        ? 'rgb(236, 236, 236)'
-                        : 'rgb(48, 71, 94)',
+                        ? "rgb(236, 236, 236)"
+                        : "rgb(48, 71, 94)",
                     }}
                     name="message"
                     required
@@ -236,7 +240,7 @@ export default function SendMail() {
                 defaultValue="Sent!"
                 onClick={closeModal}
                 style={{
-                  color: isDarkTheme ? 'rgb(236, 236, 236)' : 'rgb(48, 71, 94)',
+                  color: isDarkTheme ? "rgb(236, 236, 236)" : "rgb(48, 71, 94)",
                 }}
               />
             ) : (
@@ -247,8 +251,8 @@ export default function SendMail() {
                   onClick={closeModal}
                   style={{
                     color: isDarkTheme
-                      ? 'rgb(236, 236, 236)'
-                      : 'rgb(48, 71, 94)',
+                      ? "rgb(236, 236, 236)"
+                      : "rgb(48, 71, 94)",
                   }}
                 />
                 <input
@@ -256,8 +260,8 @@ export default function SendMail() {
                   value="Send"
                   style={{
                     color: isDarkTheme
-                      ? 'rgb(236, 236, 236)'
-                      : 'rgb(48, 71, 94)',
+                      ? "rgb(236, 236, 236)"
+                      : "rgb(48, 71, 94)",
                   }}
                 />
               </div>

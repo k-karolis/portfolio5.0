@@ -2,6 +2,7 @@ import styles from "../Social.module.scss";
 import { motion } from "framer-motion";
 import { v4 as uuidv4 } from "uuid";
 import { useContextProvider } from "../../../../../components/ContextProvider/Provider";
+import ReactTooltip from "react-tooltip";
 
 const icons = {
   hidden: {
@@ -16,7 +17,9 @@ export default function LinkedIn() {
 
   return (
     <div>
+      <ReactTooltip effect="solid" place="bottom" type="dark" />
       <a
+        data-tip="LinkedIn Profile"
         href="https://www.linkedin.com/in/karoliskimtys/"
         target="_blank"
         rel="noopener noreferrer">
