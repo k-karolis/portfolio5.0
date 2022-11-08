@@ -118,9 +118,12 @@ export default function Intro() {
                     color: isDarkTheme
                       ? "rgb(242, 163, 101)"
                       : "rgb(158, 77, 13)",
+                    border: isDarkTheme
+                      ? "1px solid rgb(242, 163, 101)"
+                      : "1px solid rgb(158, 77, 13)",
                     transition: {
-                      delay: 2 + key / 5,
-                      duration: 1,
+                      delay: 2 + key / 10,
+                      duration: 0.75,
                       type: "tween",
                     },
                   }}
