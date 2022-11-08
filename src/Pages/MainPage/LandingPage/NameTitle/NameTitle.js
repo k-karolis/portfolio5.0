@@ -1,14 +1,14 @@
-import styles from './NameTitle.module.scss';
-import { motion } from 'framer-motion';
-import { useContextProvider } from '../../../../components/ContextProvider/Provider';
-import SocialIcons from '../SocialIcons/SocialIcons';
+import styles from "./NameTitle.module.scss";
+import { motion } from "framer-motion";
+import { useContextProvider } from "../../../../components/ContextProvider/Provider";
+import SocialIcons from "../SocialIcons/SocialIcons";
 
 export default function NameTitle() {
   const { isDarkTheme } = useContextProvider();
 
-  const firstName = 'Karolis';
-  const lastName = 'Kimtys';
-  const title = 'Front End Web Developer';
+  const firstName = "Karolis";
+  const lastName = "Kimtys";
+  const title = "Full Stack Developer";
 
   const firstVariant = {
     hidden: {
@@ -40,16 +40,17 @@ export default function NameTitle() {
           variants={firstVariant}
           initial="hidden"
           animate={{
-            color: isDarkTheme ? 'rgb(236, 236, 236)' : 'rgb(34, 40, 49)',
+            color: isDarkTheme ? "rgb(236, 236, 236)" : "rgb(34, 40, 49)",
             opacity: 1,
             x: 0,
             transition: {
               duration: 0.75,
               delay: 0.0025,
-              type: 'tween',
+              type: "tween",
             },
           }}
-          exit="hidden">
+          exit="hidden"
+        >
           {firstName}
         </motion.div>
         <motion.div
@@ -58,16 +59,17 @@ export default function NameTitle() {
           variants={lastVariant}
           initial="hidden"
           animate={{
-            color: isDarkTheme ? 'rgb(236, 236, 236)' : 'rgb(34, 40, 49)',
+            color: isDarkTheme ? "rgb(236, 236, 236)" : "rgb(34, 40, 49)",
             opacity: 1,
             x: 0,
             transition: {
               duration: 0.75,
               delay: 0.05,
-              type: 'tween',
+              type: "tween",
             },
           }}
-          exit="hidden">
+          exit="hidden"
+        >
           {lastName}
         </motion.div>
       </div>
@@ -77,16 +79,17 @@ export default function NameTitle() {
         variants={titleVariant}
         initial="hidden"
         animate={{
-          color: isDarkTheme ? 'rgb(242, 163, 101)' : 'rgb(158, 77, 13)',
+          color: isDarkTheme ? "rgb(242, 163, 101)" : "rgb(158, 77, 13)",
           opacity: 1,
           x: 0,
           transition: {
             duration: 0.75,
             delay: 0.1,
-            type: 'tween',
+            type: "tween",
           },
         }}
-        exit="hidden">
+        exit="hidden"
+      >
         {title}
       </motion.div>
       <SocialIcons />

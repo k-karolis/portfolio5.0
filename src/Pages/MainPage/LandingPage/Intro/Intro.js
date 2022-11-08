@@ -8,21 +8,43 @@ export default function Intro() {
   const { isDarkTheme } = useContextProvider();
 
   const intro = [
-    "Hi, my name is Karolis and I am Front End Web Developer.",
-    "Currently working at Move The Masses Charity and developing user facing web applications so volunteers can reach out to people in need for help and support.",
-    "Open for new opportunities and looking for next challange.",
+    "Currently working at Total Performance Data as a Full Stack Developer.",
+    "Owner and Full Stack Developer at Devit Digital.",
+    "Open for new opportunities.",
+    "Looking for a new challenge.",
   ];
 
   const techList = [
     "JavaScript",
     "TypeScript",
+    "PHP",
+    "WordPress",
+    "Next.js",
     "React",
     "Node.js",
     "Express.js",
+    "MongoDB",
+    "MySQL",
+    "Git",
+    "GitHub",
+    "HTML",
+    "CSS",
+    "Sass",
+    "Framer Motion",
+    "Redux",
+    "Context API",
+    "REST API",
+    "React Testing Library",
+    "AWS",
+    "Heroku",
+    "Netlify",
+    "Vercel",
+    "Sentry",
+    "Google Analytics",
   ];
 
   return (
-    <div>
+    <>
       <motion.div
         className={styles.BackGround}
         layout
@@ -37,7 +59,8 @@ export default function Intro() {
             type: "tween",
           },
           color: isDarkTheme ? "rgb(236, 236, 236)" : "rgb(34, 40, 49)",
-        }}>
+        }}
+      >
         <div className={styles.Intro}>
           {intro.map((item, key) => {
             return (
@@ -55,7 +78,8 @@ export default function Intro() {
                     type: "tween",
                   },
                 }}
-                exit={{ opacity: 0 }}>
+                exit={{ opacity: 0 }}
+              >
                 <br />
                 {item}
 
@@ -76,43 +100,43 @@ export default function Intro() {
                 delay: 2,
               },
             }}
-            exit={{ opacity: 0 }}>
-            <motion.div>
-              {techList.map((item, key) => {
-                return (
-                  <motion.span
-                    key={key}
-                    initial={{
-                      opacity: 0,
-                      y: key,
-                      x: key,
-                    }}
-                    animate={{
-                      opacity: 1,
-                      y: 0,
-                      x: 0,
-                      color: isDarkTheme
-                        ? "rgb(242, 163, 101)"
-                        : "rgb(158, 77, 13)",
-                      transition: {
-                        delay: 2 + key / 5,
-                        duration: 1,
-                        type: "tween",
-                      },
-                    }}
-                    exit={{
-                      opacity: 0,
-                      y: key,
-                      x: key,
-                    }}>
-                    {item}
-                  </motion.span>
-                );
-              })}
-            </motion.div>
+            exit={{ opacity: 0 }}
+          >
+            {techList.map((item, key) => {
+              return (
+                <motion.span
+                  key={key}
+                  initial={{
+                    opacity: 0,
+                    y: key,
+                    // x: key,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                    // x: 0,
+                    color: isDarkTheme
+                      ? "rgb(242, 163, 101)"
+                      : "rgb(158, 77, 13)",
+                    transition: {
+                      delay: 2 + key / 5,
+                      duration: 1,
+                      type: "tween",
+                    },
+                  }}
+                  exit={{
+                    opacity: 0,
+                    y: key,
+                    x: key,
+                  }}
+                >
+                  {item}
+                </motion.span>
+              );
+            })}
           </motion.div>
         </div>
       </motion.div>
-    </div>
+    </>
   );
 }
