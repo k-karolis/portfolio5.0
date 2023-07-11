@@ -1,45 +1,45 @@
-@import "../../../../index.module.scss";
+@import '../../../../index.module.scss';
 
 .BackGround {
-  display: flex;
-  flex-direction: column;
-  // border-radius: calc(1vw + 5px);
-  // border-left: solid $brightOrange 1px;
-  // border-right: solid $brightOrange 1px;
-  width: calc(25vw + 300px);
+    display: flex;
+    flex-direction: column;
+    // border-radius: calc(1vw + 5px);
+    // border-left: solid $brightOrange 1px;
+    // border-right: solid $brightOrange 1px;
+    width: calc(25vw + 300px);
 }
 
 .Intro {
-  padding: 10px;
-  margin: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: calc(1em + 0.5vw);
-  letter-spacing: 3px;
-  line-height: 20px;
-  font-weight: 500;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    // text-align: center;
+    font-size: calc(1em + 0.5vw);
+    letter-spacing: 3px;
+    line-height: 15px;
+    font-weight: 400;
 }
 
 .Tech {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  // width: 500px;
-  flex-wrap: wrap;
-  font-size: calc(0.5em + 0.35vw);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    // width: 500px;
+    flex-wrap: wrap;
+    font-size: calc(0.5em + 0.35vw);
 }
 
 .Tech span {
-  // border-top: 1px solid $brightOrange;
-  // border-bottom: 1px solid $brightOrange;
-  // border-left: 1px solid $brightOrange;
-  // border-right: 1px solid $brightOrange;
-  border-radius: calc(0.1vw + 2px);
-  margin: 3px;
-  padding: 0 5px 0 5px;
-  font-weight: 600;
+    // border-top: 1px solid $brightOrange;
+    // border-bottom: 1px solid $brightOrange;
+    // border-left: 1px solid $brightOrange;
+    // border-right: 1px solid $brightOrange;
+    border-radius: calc(0.1vw + 2px);
+    margin: 3px;
+    padding: 0 10px;
+    font-weight: 600;
 }
